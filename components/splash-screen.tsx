@@ -39,7 +39,7 @@ export function SplashScreen() {
           transition={{ delay: 0.5 }}
           className="text-3xl font-bold"
         >
-          OCD Helper
+          OCD & Phobia Tool
         </motion.h1>
         <motion.p
           initial={{ y: 20, opacity: 0 }}
