@@ -30,14 +30,14 @@ export function TherapistCard({ onClose }: TherapistCardProps) {
           <div className="space-y-2">
             <div className="flex items-center gap-2 text-primary">
               <Phone className="h-4 w-4" />
-              <a href="tel:+44 7387 476042" className="text-sm hover:underline">
-                (+44) 7387 476042
+              <a href="tel:+44 5654 234123" className="text-sm hover:underline">
+                (+44) 7644 432042
               </a>
             </div>
             <div className="flex items-center gap-2 text-primary">
               <Mail className="h-4 w-4" />
               <a href="mailto:fikiadigital@gmail.com" className="text-sm hover:underline">
-              fikiadigital@gmail.com
+              cbttherapy@gmail.com
               </a>
             </div>
             <div className="flex items-center gap-2 text-primary">

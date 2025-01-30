@@ -31,6 +31,7 @@ export function SplashScreen() {
           transition={{ duration: 0.5 }}
           className="flex items-center justify-center mb-4"
         >
+          
           <Star className="h-16 w-16" />
         </motion.div>
         <motion.h1
@@ -39,7 +40,8 @@ export function SplashScreen() {
           transition={{ delay: 0.5 }}
           className="text-3xl font-bold"
         >
-          OCD & Phobia Tool
+        
+          OCD & Phobias Tool
         </motion.h1>
         <motion.p
           initial={{ y: 20, opacity: 0 }}
