@@ -10,8 +10,8 @@ import React from "react"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "OCD Helper",
-  description: "A comprehensive tool for managing OCD",
+  title: "FearLess",
+  description: "A comprehensive tool for managing OCD and Phobias",
 }
 
 export default function RootLayout({
