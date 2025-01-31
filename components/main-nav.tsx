@@ -26,37 +26,44 @@ export function MainNav() {
   return (
     <nav className="sticky top-0 z-40 border-b bg-background">
       <div className="flex h-16 items-center px-4">
-        <Link href="/" className="font-bold text-xl flex items-center gap-2 mr-4">
+        {/* Logo - Always left aligned */}
+        <Link href="/" className="mr-6 flex items-center gap-2 font-bold text-xl">
           <span className="text-2xl">🌟</span>
           <span className="hidden sm:inline">OCD Helper</span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex space-x-2">
-          {links.map((link) => (
-            <Button
-              key={link.href}
-              variant={pathname === link.href ? "default" : "ghost"}
-              asChild
-              className="hidden lg:flex"
-            >
-              <Link href={link.href} className="flex items-center space-x-2">
-                <span>{link.emoji}</span>
-                <span>{link.name}</span>
-              </Link>
-            </Button>
-          ))}
+        {/* Desktop Navigation - Centered */}
+        <div className="hidden lg:flex flex-1 justify-center">
+          <div className="flex space-x-1">
+            {links.map((link) => (
+              <Button
+                key={link.href}
+                variant={pathname === link.href ? "default" : "ghost"}
+                asChild
+                className="px-4 transition-all duration-200 hover:scale-105"
+              >
+                <Link href={link.href} className="flex items-center space-x-2">
+                  <span className="text-xl">{link.emoji}</span>
+                  <span className="font-medium">{link.name}</span>
+                </Link>
+              </Button>
+            ))}
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
-            <Button variant="ghost" className="lg:hidden" size="icon">
-              <Menu className="h-5 w-5" />
+            <Button variant="ghost" className="lg:hidden ml-auto" size="icon">
+              <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="w-72">
+            <div className="flex items-center gap-2 font-bold text-xl mb-4">
+              <span className="text-2xl">🌟</span>
+              <span>OCD Helper</span>
+            </div>
             <ScrollArea className="h-[calc(100vh-4rem)] pb-10">
               <div className="flex flex-col space-y-2 py-4">
                 {links.map((link) => {
@@ -66,12 +73,12 @@ export function MainNav() {
                       key={link.href}
                       variant={pathname === link.href ? "default" : "ghost"}
                       asChild
-                      className="justify-start"
+                      className="justify-start hover:scale-105 transition-all duration-200"
                       onClick={() => setOpen(false)}
                     >
                       <Link href={link.href} className="flex items-center space-x-2">
-                        <span>{link.emoji}</span>
-                        <span>{link.name}</span>
+                        <span className="text-xl">{link.emoji}</span>
+                        <span className="font-medium">{link.name}</span>
                       </Link>
                     </Button>
                   )

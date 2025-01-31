@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -25,7 +25,7 @@
     --ring: 142 70% 14%;
     --radius: 0.5rem;
   }
- 
+
   .dark {
     --background: 20 14.3% 4.1%;
     --foreground: 0 0% 95%;
@@ -57,3 +57,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Add custom styles for navigation */
+@layer components {
+  .nav-button {
+    @apply transition-all duration-200 hover:scale-105;
+  }
+}
+
