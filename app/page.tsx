@@ -57,7 +57,7 @@ const features = [
 
 export default function Dashboard() {
   return (
-    <div className="container px-4 py-8 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <div className="flex flex-col items-center text-center mb-8 sm:mb-12">
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Welcome Back! 👋</h1>
         <p className="text-lg sm:text-xl text-muted-foreground max-w-[600px]">
@@ -72,7 +72,7 @@ export default function Dashboard() {
           <CardDescription>Common tasks and activities you might want to do</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild className="w-full sm:w-auto">
               <Link href="/diary/new">Record Daily Check-in 📝</Link>
             </Button>
